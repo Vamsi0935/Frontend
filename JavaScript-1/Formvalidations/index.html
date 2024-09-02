@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validations</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Register Here</h2>
+        </div>
+        <form action="index.html" class="form" id="form">
+            <div class="field">
+                <label for="username">Username: </label>
+                <input type="text" placeholder="Enter your name " id="uname" class="name">
+                <!-- <span id="name_error"></span> -->
+                <small id="uname_error">Error</small>
+            </div>
+            <div class="field">
+                <label for="email">Email: </label>
+                <input type="email" placeholder="Enter your email " id="email" class="email">
+                <!-- <span id="email_error"></span> -->
+                <small id="error">Error</small>
+            </div>
+            <div class="field">
+                <label for="password">Password: </label>
+                <input type="password" placeholder="Enter your password " id="password" class="password">
+                <!-- <span id="password_error"></span> -->
+                <small id="error">Error</small>
+            </div>
+            <div class="field">
+                <label for="password">Confirm Password: </label>
+                <input type="password" placeholder="Confirm Password" id="cpassword" class="cpassword">
+                <!-- <span id="cpassword_error"></span> -->
+                <small id="error">Error</small>
+            </div>
+            <button class="button">Submit</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

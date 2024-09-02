@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch()</title>
+    <style>
+        #display {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid black;
+        }
+
+       #display p {
+            text-align: center;
+        }
+
+        .set img {
+            width: 75%;
+            border: 1px solid red;
+        } 
+    </style>
+</head>
+
+<body>
+    <div id="display">
+        
+    </div>
+    <script>
+        // making a request to backend
+        fetch("https://reqres.in/api/users?page=2")
+            // getting response back from fetch
+            .then(function (res) {
+                // console.log(res)
+                // converting and returnung the response into jason format
+                return res.json()
+            })
+            // getting the new response in object format
+            .then(function (resJson) {
+                // displaying the object
+                console.log(resJson)
+                showData(resJson.data)
+            })
+        function showData(employees) {
+            console.log("employees details", employees)
+            for (i = 0; i < employees.length; i++) {
+                document.getElementById("display").innerHTML += `
+                    <div class="set">
+                        <p>Firstname is: ${employees[i].first_name}</p>
+                        <p>Lastname is: ${employees[i].last_name}</p>
+                        <p>Email is: ${employees[i].email}</p>
+                        <p>ID is: ${employees[i].id}</p>
+                        <img src="${employees[i].avatar}" width="15%">
+                    </div>
+                        `
+            }
+        }
+    </script>
+</body>
+
+</html>

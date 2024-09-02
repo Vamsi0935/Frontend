@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Dropdown in Bootstrap</title>
+</head>
+
+<body>
+    <!-- dropdown in single button -->
+    <div class="dropdown m-2">
+        <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+            Dropdown button
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+    dropdown link
+    <div class="dropdown m-2">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+            aria-expanded="false">
+            Dropdown link
+        </a>
+
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+    Example single danger button
+    <div class="btn-group m-2">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            Action
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+    </div>
+    <!-- Example split danger button -->
+    <div class="btn-group">
+        <button type="button" class="btn btn-danger">Action</button>
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+            aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+    </div><br>
+    <!-- Large button groups (default and split) -->
+    <!-- default -->
+    <div class="btn-group m-2">
+        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown"
+            aria-expanded="false">
+            Large button
+        </button>
+        <div class="dropdown-menu">
+            ...
+        </div>
+    </div>
+    <!-- split -->
+    <div class="btn-group">
+        <button class="btn btn-secondary btn-lg" type="button">
+            Large split button
+        </button>
+        <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split"
+            data-toggle="dropdown" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+            ...
+        </div>
+    </div>
+    <div class="dropdown m-2">
+        <button class="btn btn-success text-light dropdown-toggle dropdown-toggle-split" type="button">Navbar</button>
+        <div class="dropdown-menu">
+            <div class="dropdown-item">Home</div>
+            <div class="dropdown-menu">About</div>
+            <div class="dropdown-menu">Contact</div>
+            <div class="dropdown-menu">Help</div>
+            <div class="dropdown-divider"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

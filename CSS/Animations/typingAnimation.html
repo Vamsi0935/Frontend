@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Animation</title>
+    <style>
+        html {
+            min-height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            color: grey;
+            font-family: monospace;
+            background-color: rgb(20, 20, 20);
+        }
+
+        .container {
+            display: inline-block;
+            margin: 20%;
+        }
+
+        .text {
+            overflow: hidden;
+            font-size: 3.6rem;
+            font-weight: 700;
+            border-right: 0.15rem solid orange;
+            white-space: nowrap;
+            animation: typing 5s steps(45, end) infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p class="text">Welcome Vamsi Krishna Dudyala</p>
+    </div>
+</body>
+
+</html>

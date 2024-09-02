@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="greet">GOOD MORNING</h1>
+    <p>Name: <span id="username"></span></p>
+    <p>Qualification: <span id="qualification"></span></p>
+    <p>City: <span id="city"></span> </p>
+    <p>Age: <span id="age"></span></p>
+    <!-- <p>Name: <input type="text" placeholder="Enter your name" id="name"></p>
+    <p>Email: <input type="email" placeholder="Enter your email" id="email"></p>
+    <p>Age: <input type="number" placeholder="Enter your age" id="age"></p>
+    <button onclick="demo()">Submit</button> -->
+    <script>
+        function demo() {
+            // var name = document.getElementById("name").value //for input field type values
+            // console.log(name)
+            // var email = document.getElementById("email").value //for input field type values
+            // console.log(email)
+            // var age = document.getElementById("age").value //for input field type values
+            // console.log(age)
+            // var listOfClasses=document.getElementsByClassName("list")
+            // console.log(listOfClasses)
+            // var name=document.querySelector("#name").value
+            // console.log(name)
+            // var newInput=document.createElement("input")
+            // document.body.append(newInput)
+            var username = prompt("Enter your name")
+            var qualification = prompt("Enter your qualification")
+            var city = prompt("Enter your city")
+            var age = prompt("Enter your age")
+            document.getElementById("username").innerHTML = username
+            document.getElementById("qualification").innerHTML = qualification //for text type values
+            document.getElementById("city").innerHTML = city
+            document.getElementById("age").innerHTML = age
+            console.log(username)
+            console.log(qualification)
+            console.log(city)
+            console.log(age)
+        }
+    </script>
+</body>
+
+</html>

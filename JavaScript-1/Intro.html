@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+</head>
+
+<body>
+    <!-- <h1>JavaScript</h1>
+    <button onclick="date()">Display Date and time</button> -->
+    <p id="heading">Initial Heading</p>
+    <p id="paragraph">Initial Paragraph text</p>
+    <button onclick="changeContent()">Change</button>
+    <p id="demo"></p>
+    <script>
+        // 
+        function changeContent() {
+            let headingElement = document.getElementById("heading");
+            headingElement.textContent = "New Heading";
+
+            let paragraphElement = document.getElementById("paragraph");
+            paragraphElement.textContent = "New Paragraph Text";
+        }
+        //Data types
+        // let a = 15,str="Vamsi Krishna",n=166598468768486n,b=true,c=null,d;
+        // console.log("The given number :",a);
+        // console.log("My name is: ",str);
+        // console.log(n)
+        // console.log(b,c,d)
+        // var playersName = [                  //object Data type
+        //     { name: "MS Dhoni", age: 41 },
+        //     { name: "Virat", age: 34 },
+        //     { name: "Rohith", age: 35 },
+        //     { name: "Jadeja", age: 33 },
+        // ]
+        // console.log(playersName[0].name, playersName[0].age);
+        // console.log(playersName[1].name, playersName[1].age);
+        // console.log(playersName[2].name, playersName[2].age);
+        // console.log(playersName[3].name, playersName[3].age);
+        // console.log("Heyy, I am Vamsi Krishna Dudyala!!!");
+        // alert("Heyy, I am Vamsi Krishna Dudyala");
+        // prompt("Enter your name:")
+        // confirm("Are you boss?")
+        // alert("Yes I am the boss")
+        //Type Conversion
+        // let value = true;
+        // alert(typeof value);
+        // value = String(value);
+        // alert(typeof value);
+        // let str = "123";
+        // alert(typeof str);           //boolean--->string
+        // let num = Number(str);
+        // alert(typeof num);           // string--->number
+        // alert(Boolean(0));
+        // console.log(Boolean(0));     //boolean conversion
+        // console.log(Boolean("Hello"));
+        // let firstName = "";
+        // let lastName = "";
+        // let nickName = "SuperCoder";
+        // console.log(firstName || lastName || nickName);
+        // function showMessage() {
+        //     console.log(alert("Vamsi Krishna Dudyala!!"));
+        // }
+        // showMessage();
+
+    </script>
+</body>
+
+</html>

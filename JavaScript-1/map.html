@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Function</title>
+</head>
+
+<body>
+    <h1>Good Afternoon!!</h1>
+    <p id="demo"></p>
+    <script>
+        const students = [
+            { firstname: "Vamsi Krishna", lastname: "Dudyala" },
+            { firstname: "Srinidhi", lastname: "Sriramula" },
+            { firstname: "Maneesha Reddy", lastname: "Gouraram" },
+            { firstname: "Vineeth", lastname: "Kuntala" },
+            { firstname: "Bhasker", lastname: "Pradeep" },
+        ];
+        //document.getElementById("demo").innerHTML = students.map(getFullName);
+        // function getFullName(item) {
+        //     console.log(item.firstname, item.lastname)
+        //     return [item.firstname, item.lastname].join(" ");
+        // }
+        // let getFullName = students.map(function (item) {
+        //     return [item.firstname, item.lastname].join(" ");
+        // });
+        // document.getElementById("demo").innerHTML = getFullName;
+        // console.log(getFullName);
+        let getFullName = students.map((item) => {
+            return [item.firstname, item.lastname].join(" ");
+        });
+        document.getElementById("demo").innerHTML = getFullName;
+        console.log(getFullName);
+    </script>
+</body>
+
+</html>

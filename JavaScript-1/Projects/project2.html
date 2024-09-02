@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Elements Dynamically</title>
+</head>
+
+<body>
+    <h2>Employees List</h2>
+    <table id="employeeList" border="2">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Table rows will be added dynamically here -->
+        </tbody>
+    </table>
+
+    <script>
+        // Prompt for employee details
+        let newId = prompt("Enter your ID: ");
+        let newName = prompt("Enter your name: ");
+        let newAge = prompt("Enter your age: ");
+
+        // Function to add a new row with employee details
+        function addEmployee(id, name, age) {
+            // Create a new table row
+            let newRow = document.createElement('tr');
+
+            // Create and append ID cell
+            let idCell = document.createElement('td').textContent = id;
+            //idCell.textContent = id;
+            newRow.appendChild(idCell);
+
+            // Create and append Name cell
+            let nameCell = document.createElement('td').textContent = name;
+            //nameCell.textContent = name;
+            newRow.appendChild(nameCell);
+
+            // Create and append Age cell
+            let ageCell = document.createElement('td').textContent = age;
+            //ageCell.textContent = age;
+            newRow.appendChild(ageCell);
+
+            // Append the new row to the table body
+            let tableBody = document.getElementById('tableBody');
+            tableBody.appendChild(newRow);
+        }
+
+        // Call the function to add the employee details
+        addEmployee(newId, newName, newAge);
+    </script>
+</body>
+
+</html>

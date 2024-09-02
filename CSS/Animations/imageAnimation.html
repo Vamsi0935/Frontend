@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Animation</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .container {
+            width: 50%;
+            height: 200px;
+            display: flex;
+            gap: 5px;
+        }
+
+        .container img {
+            width: 10%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid white;
+            transition: all ease-out 1s;
+        }
+
+        .container img:hover {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://cdn.marvel.com/content/1x/avengersendgame_lob_crd_05.jpg" alt="img1">
+        <img src="https://m.media-amazon.com/images/M/MV5BZDljMTc0YzctMzg3Ni00N2VhLTgyODYtNmYxMTQxY2I1ZDUyXkEyXkFqcGdeQXVyMTk2OTAzNTI@._V1_.jpg"
+            alt="img2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1rIWZdIa6hfBRsNAFtrRjPFreZQj9Zomtgg&s"
+            alt="img3">
+        <img src="https://w0.peakpx.com/wallpaper/1020/783/HD-wallpaper-avengers-endgame-end-war.jpg" alt="img4">
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/2b/Avengers_%28Marvel_Comics%29_vol_3_num_38.jpg"
+            alt="img5">
+        <img src="https://w0.peakpx.com/wallpaper/249/728/HD-wallpaper-super-spiderman-electric-blue-flash-graphy-amoled-spider-man-amoled-spider-avengers-avengers-marvel-dark-thumbnail.jpg"
+            alt="img6">
+    </div>
+</body>
+
+</html>

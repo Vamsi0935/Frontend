@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Elements Dynamically</title>
+</head>
+
+<body>
+    <h2>Shopping List</h2>
+    <ul id="shoppingList">
+        <!-- Existing list items -->
+        <li>Bread</li>
+        <li>Milk</li>
+    </ul>
+    <button onclick="addItem()">Add Item</button>
+
+    <script>
+        function addItem() {
+            let newItemText = prompt('Enter new item:');
+            if (newItemText) {
+                // Create a new list item
+                let newItem = document.createElement('li');
+                newItem.textContent = newItemText;
+
+                // Append the new item to the shopping list
+                let shoppingList = document.getElementById('shoppingList');
+                shoppingList.appendChild(newItem);
+            }
+        }
+    </script>
+</body>
+
+</html>

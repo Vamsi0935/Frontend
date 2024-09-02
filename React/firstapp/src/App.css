@@ -1,0 +1,21 @@
+.parent {
+  /* display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 2%;
+  margin: 2%; */
+  text-align: center;
+}
+
+.details {
+  /* background-color: plum; */
+  width: 15%;
+  /* border-radius: 5px;
+  border: 1px solid black; */
+  padding: 10px;
+  text-align: center;
+  margin: 1%;
+  flex-grow: 1;
+}

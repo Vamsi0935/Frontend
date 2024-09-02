@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            /* border: 1px solid red; */
+            font-family: sans-serif;
+        }
+
+        body {
+            margin: 0%;
+        }
+
+        .navbar {
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .logo {
+            width: 10%;
+            vertical-align: middle;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-evenly;
+            width: 50%;
+        }
+
+        .nav-links a {
+            font-size: 0.8rem;
+        }
+
+        .nav-links a:hover {
+            color: orange;
+        }
+
+        .section2 {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5% 10%;
+            display: flex;
+        }
+
+        .shapes {
+            width: 50%;
+            position: relative;
+        }
+
+        .line {
+            border: 2px solid orange;
+            width: 60%;
+            position: relative;
+            top: 9px;
+        }
+
+        .rectangle {
+            background-color: gray;
+            width: 45%;
+            padding: 23% 20%;
+            position: absolute;
+            top: 15%
+        }
+
+        .circle1,
+        .circle2 {
+            background-color: orange;
+            border-radius: 50%;
+            color: white;
+            width: 100px;
+            min-height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            top: 0%;
+            right: 10%
+        }
+
+        .circle2 {
+            background-color: white;
+            color: black;
+            font-size: 0.7rem;
+            width: 70px;
+            min-height: 70px;
+            top: 33%
+        }
+
+        .hosting {
+            color: white;
+            width: 30%;
+        }
+
+        .hosting a {
+            text-decoration: none;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 1%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a style="width: 30%;" href="">
+            <img class="logo" src="https://s3-eu-west-1.amazonaws.com/tpd/logos/5d8f0f814aa64800010d86a6/0x0.png" />
+            <b style="color: orange;">HOST</b>
+            <b>LINEA</b>
+        </a>
+        <div class="nav-links">
+            <a href="">Home</a>
+            <a href="">Domains</a>
+            <a href="">Hosting</a>
+            <a href="">Website</a>
+            <a href="">Affliate</a>
+            <a href="">Pages</a>
+            <a href="">Blog</a>
+            <a href="">Contact</a>
+        </div>
+    </nav>
+    <hr align="left" class="line" />
+    <section class="section2">
+        <div class="shapes">
+            <p class="rectangle"></p>
+            <p class="circle1">
+                <span>Starting at</span>
+                <span>$4.99/mo</span>
+            </p>
+            <p class="circle2">
+                <span>Upto</span>
+                <span>50% off</span>
+            </p>
+        </div>
+        <div class="hosting">
+            <p>
+                <span style="font-size: 1.7rem;">UNLIMITED</span><br />
+                <b style="font-size: 1.9rem;">WEB HOSTING</b>
+            </p>
+            <p><i class="fa-solid fa-check"></i> Unlimited Disk space</p>
+            <p><i class="fa-solid fa-check"></i> free Disk space</p>
+            <p><i class="fa-solid fa-check"></i> Unlimited Disk space</p>
+            <p><i class="fa-solid fa-check"></i> Unlimited Disk space</p>
+            <p><i class="fa-solid fa-check"></i> Unlimited Disk space</p>
+            <a href="">READ MORE</a>
+            <a href="">GET STARTED NOW</a>
+        </div>
+    </section>
+</body>
+
+</html>

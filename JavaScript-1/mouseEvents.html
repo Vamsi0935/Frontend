@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handlers</title>
+    <style>
+        form {
+            text-align: center;
+        }
+
+        form input {
+            width: 30%;
+            padding: 1.2%;
+        }
+
+        button {
+            margin: 1.5%;
+            padding: 0.7%;
+            border-radius: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div>
+            <label>Name:</label>
+            <input type="text" placeholder="Enter your name">
+        </div>
+        <!-- <button onclick="document.body.style.backgroundColor='green'">Change color</button> -->
+        <!--Inline event handler-->
+        <button id="b1">Change Color</button>
+    </form>
+    <script>
+        // let btn = document.getElementById("b1");
+        // btn.onclick =
+        //     function () {
+        //         document.body.style.backgroundColor = 'plum';      //Using event properties
+        //     }
+
+        // using addEventListener() method
+        let btn = document.getElementById("b1");
+        btn.addEventListener('click', change);
+        function change() {
+            document.body.style.backgroundColor = "green";
+        }
+    </script>
+</body>
+
+</html>

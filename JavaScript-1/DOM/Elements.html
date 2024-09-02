@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements in JavaScript</title>
+</head>
+
+<body>
+    <div id="name" class="person-name">
+        <h1>Vamsi Krishna Dudyala</h1>
+        <p>Frontend Developer</p>
+    </div>
+    <div id="name" class="person-name">
+        <h1>Srinidhi Sriramula</h1>
+        <p>Frontend Developer</p>
+    </div>
+    <div id="name" class="person-name">
+        <h1>Maneesha Reddy Gouraram</h1>
+        <p>Frontend Developer</p>
+    </div>
+    <h1>Employee Details!!</h1>
+    <p>Name: <span id="name"></span></p>
+    <p>Role: <span id="role"></span></p>
+    <script>
+        var x = document.getElementById('name');
+        console.log(x)
+        var y = document.getElementsByClassName('person-name');
+        console.log(y)
+        var z = document.getElementsByTagName('p');
+        console.log(z)
+        var a = document.querySelectorAll("#name")
+        console.log(a)
+        // var name = prompt("Enter name");
+        // var role = prompt("Enter role");
+        // document.getElementById("name").innerHTML = name;
+        // document.getElementById("role").innerHTML = role;
+    </script>
+</body>
+
+</html>

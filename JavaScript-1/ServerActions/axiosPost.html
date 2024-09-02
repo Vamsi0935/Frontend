@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch(POST) Method</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"
+        integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <h1>Axios POST Method</h1>
+    <p>Name:
+        <input id="name" placeholder="Enter name" />
+    </p>
+    <p>Mobile Number:
+        <input id="mobile" placeholder="Enter mobile number" />
+    </p>
+    <button onclick="send()">Submit</button>
+    <script>
+        function send() {
+            var name = document.getElementById("name").value
+            var mobile = document.getElementById("mobile").value
+            console.log(name, mobile)
+            // axios.get("https://reqres.in/api/users?page=2")
+            //     .then((res)=>{
+            //         console.log(res)
+            //     })
+            axios.post("https://reqres.in/api/users", { name, mobile, age: 23 })
+                .then((res) => {
+                    console.log(res);
+                })
+            // axios.put("https://reqres.in/api/users/2")
+            //     .then((res) => {
+            //         console.log(res);
+            //     })
+            // axios.delete("https://reqres.in/api/users/2")
+            //     .then((res) => {
+            //         console.log(res);
+            //     })
+        }
+
+        //by using fetch() method
+        /*
+          fetch("https://reqres.in/api/users/post", {
+              //Adding method type
+              method: "POST",
+              //Adding body or contents to send
+              body: JSON.stringify({
+                  title: "foo",
+                  body: "bar",
+                  userId: 1
+              }),
+              //Adding headers to the request
+              headers: {
+                  "Content-type": "application/json; charset=UTF-8"
+              }
+          })
+              //converting to JSON
+              .then(response => response.json())
+              //displaying results to console
+              .then(json => console.log(json));*/
+    </script>
+</body>
+
+</html>

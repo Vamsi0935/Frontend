@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+
+<body>
+    <form action="" onsubmit="validate()">
+        <p>Name: <input type="text" id="name" placeholder="Enter your name"></p>
+        <p>Phone Number: <input type="text" id="phonenumber" placeholder="Enter your phone number"></p>
+        <p>Email ID: <input type="text" id="email" placeholder="Enter your Email ID"></p>
+        <p>City: <select name="" id="city" required>
+            <option value="select">Select Your city</option>
+            <option value="1">Hyderabad</option>
+            <option value="2">Bangalore</option>
+            <option value="3">Chennai</option>
+            <option value="4">Mumbai</option>
+            <option value="5">New Delhi</option>
+        </select></p>
+        <!-- <p>Password: <input type="password" id="password" placeholder="Enter your password"></p> -->
+        <!-- <div>Gender:
+            <input type="checkbox" id="gender">Male
+            <input type="checkbox" id="gender">Female
+        </div>
+         -->
+        <p><button>Submit</button></p>
+    </form>
+    <script>
+        function validate() {
+            var name = document.getElementById("name").value
+            var phoneNumber = document.getElementById("phonenumber").value
+            var email = document.getElementById("email").value
+            //var password = document.getElementById("password").value
+             var city = document.getElementById("city").value
+            // var gender = document.getElementById("gender").value
+            var nameCheck = /^[a-zA-Z ]+$/
+            var phoneNumberCheck = /^[0-9]{10}$/
+            var emailCheck = /^[a-zA-Z0-9.]+@[a-z]+\.[a-z]{2,3}$/
+            //dvkrishna142000   @gmail  .com
+            // var passwordCheck = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8}$/
+            
+            // var genderCheck = /^$/
+            if (name == "" || name.length < 3) {
+                alert("Please check your name")
+                return false
+            }
+            if (!name.match(nameCheck)) {
+                alert("Name must carry alphabets")
+                return false
+            }
+            if (!phoneNumber.match(phoneNumberCheck)) {
+                alert("Mobile Number must carry 10 digits")
+                return false
+            }
+            if (!email.match(emailCheck)) {
+                alert("Please check your Email ID once")
+                return false
+            }
+            // if (!password.match(passwordCheck)) {
+            //     alert("Password contains block letters, Special characters and numbers")
+            //     return false
+            // }
+            if (city==="select") {
+                alert("Select your city")
+                return false
+            }
+            return true
+        }
+    </script>
+</body>
+
+</html>

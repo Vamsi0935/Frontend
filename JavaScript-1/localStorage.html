@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+
+<body>
+    <script>
+        const person = [{
+            name: "Vamsi Krishna Dudyala",
+            age: 23,
+            city: "Hyder]abad"
+        },
+        {
+            name: "Srinidhi Sriramula",
+            age: 23,
+            city: "Hyderabad"
+        },
+        {
+            name: "Maneedha Reddy Gouraram",
+            age: 23,
+            city: "Hyderabad"
+        },
+        {
+            name: "Vineeth Kuntala",
+            age: 23,
+            city: "Hyderabad"
+        },
+        {
+            name: "Jagadeesh Pydi",
+            age: 23,
+            city: "Vijayawada"
+        }]
+        console.log(person);
+        //crud operation based on localStorage
+
+        //create new record
+        const personToJSON = JSON.stringify(person);
+        localStorage.setItem("person", personToJSON);
+
+        //Read a Record
+        const personJSON = localStorage.getItem("person");
+        const JSONToPerson = JSON.parse(personJSON);
+        console.log(JSONToPerson[0]);
+
+        //update a record
+        const personToJSON1 = JSON.stringify(person1);
+        localStorage.setItem("person1", personToJSON1)
+        console.log(personToJSON1);
+
+        //delete a record
+        localStorage.removeItem("person1");
+    </script>
+</body>
+
+</html>

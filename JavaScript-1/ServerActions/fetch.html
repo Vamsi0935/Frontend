@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Method</title>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"
+        integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <style>
+        #demo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid black;
+        }
+
+        #demo p {
+            text-align: center;
+        }
+
+        img {
+            width: 75%;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div>
+        <h1>Fetch API GET Request</h1>
+        <h3>Fetching Users</h3>
+        <table id="user"></table>
+    </div> -->
+    <div id="demo"></div>
+    <script>
+        //fetch() method
+        //making a request to backend
+        fetch("https://reqres.in/api/users?page=2")
+
+            //getting response back from fetch
+            .then((res) => {
+                return res.json();
+            })
+
+            //getting a new response in object format
+            .then((resJson) => {
+
+                //displaying the data
+                console.log(resJson);
+                showData(resJson.data);
+            })
+
+        function showData(employees) {
+            console.log("Employee details", employees);
+            for (i = 0; i < employees.length; i++) {
+                document.getElementById("demo").innerHTML += `
+                    <div>
+                        <p>ID: ${employees[i].id}</p>
+                        <p>Firstname: ${employees[i].firstname}</p>
+                        <p>Lastname: ${employees[i].lastname}</p>
+                        <p>Email: ${employees[i].email}</p>
+                        <img src="${employees[i].avatar}" />
+                    </div>
+                `
+            }
+        }
+
+
+        //by using axios method
+        // axios.get("https://reqres.in/api/users?page=2")
+        //     .then((res) => {
+        //         console.log(res);
+        //     })
+        // function showData(employees) {
+        //     console.log("Employee details", employees);
+        //     for (i = 0; i < employees.length; i++) {
+        //         document.getElementById("demo").innerHTML += `
+        //             <div>
+        //                 <p>ID: ${employees[i].id}</p>
+        //                 <p>Firstname: ${employees[i].firstname}</p>
+        //                 <p>Lastname: ${employees[i].lastname}</p>
+        //                 <p>Email: ${employees[i].email}</p>
+        //                 <img src="${employees[i].avatar}" />
+        //             </div>
+        //         `
+        //     }
+        // }
+
+
+
+
+        // fetch("https://reqres.in/api/users?page=2")
+        //     .then(response => response.json())
+        //     .then(json => {
+        //         //create a variable to store HTML
+        //         let li = `<tr><th>ID</th><th>FirstName</th><th>LastName</th><th>Email</th><th>Avatar</th>`
+        //         //Loop through each data and add a table row
+        //         json.forEach(user => {
+        //             li += `<tr>
+        //                 <td>${user.id}</td>
+        //                 <td>${user.firstname}</td>
+        //                 <td>${user.lastname}</td>
+        //                 <td>${user.email}</td>
+        //                 <td>${user.avatar}</td>
+        //             </tr>`;
+        //         });
+        //         //Display Result
+        //         document.getElementById("user").innerHTML = li;
+        //     });
+
+    </script>
+</body>
+
+</html>

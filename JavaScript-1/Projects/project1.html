@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Project</title>
+</head>
+
+<body>
+    <h1>Student Details</h1>
+    <table id="studentsTable" border="2">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+    <script>
+        const students = [
+            { id: 101, name: "Vamsi Krishna Dudyala", age: 23, course: "Civil Engineering", address: "Hyderabad" },
+            { id: 102, name: "Srinidhi Sriramula", age: 23, course: "CSE", address: "Hyderabad" },
+            { id: 103, name: "Maneesha Reddy Gouraram", age: 22, course: "ECE", address: "Hyderabad" },
+            { id: 104, name: "Jagadeesh Pydi", age: 23, course: "MCA", address: "Vijayawada" },
+            { id: 105, name: "Vineeth Kuntala", age: 23, course: "ECE", address: "Hyderabad" },
+            { id: 106, name: "Bhasker Pradeep", age: 22, course: "ECE", address: "Hyderabad" },
+            { id: 107, name: "Raja Sekhar Dudyala", age: 32, course: "Pharma Scientist", address: "Hyderabad" }
+        ];
+        console.log(students);
+        function table() {
+            const tableBody = document.getElementById("tableBody");
+            tableBody.innerHTML = "";
+
+            students.forEach(student => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                <td>${student.id}</td>
+                <td>${student.name}</td>
+                <td>${student.age}</td>
+                <td>${student.course}</td>
+                <td>${student.address}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+        table(students);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.students {
+  background-color: plum;
+  width: 18vw;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.navbar {
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1%;
+}
+.navbar a{
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: cursive;
+}
